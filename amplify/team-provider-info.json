@@ -1,0 +1,14 @@
+{
+    "javascript": {
+        "awscloudformation": {
+            "AuthRoleName": "pubg-20190226165249-authRole",
+            "UnauthRoleArn": "arn:aws:iam::931228184156:role/pubg-20190226165249-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::931228184156:role/pubg-20190226165249-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "pubg-20190226165249-deployment",
+            "UnauthRoleName": "pubg-20190226165249-unauthRole",
+            "StackName": "pubg-20190226165249",
+            "StackId": "arn:aws:cloudformation:us-east-1:931228184156:stack/pubg-20190226165249/da3f54a0-39b8-11e9-90f6-0e9ab7cb9104"
+        }
+    }
+}

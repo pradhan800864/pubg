@@ -1,0 +1,16 @@
+const AdminController = require('./controllers/AdminController')
+const AdminAuthenticationPolicy = require('./policies/AdminAuthenticationPolicy')
+const UserAuthenticationPolicy = require('./policies/UserAuthenticationPolicy')
+const UserController = require('./controllers/UserController')
+const TournmentController = require('./controllers/TournmentController')
+module.exports = (app) => {
+  app.post('/register', AdminAuthenticationPolicy.register, AdminController.register)
+  app.post('/login', AdminController.login)
+  app.post('/userregister', UserAuthenticationPolicy.userregister, UserController.userregister)
+  app.post('/userlogin', UserController.userlogin)
+  app.post('/savetournment', TournmentController.save)
+  app.get('/show', TournmentController.show)
+  app.get('/showdetails/:TournmentId', TournmentController.showdetails)
+  app.post('/registertournment/:userid&:tournmentid', TournmentController.post)
+  app.get('/check/:userid&:tournmentid', TournmentController.check)
+}
